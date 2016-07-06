@@ -15,7 +15,7 @@ namespace ProjetoModeloDDD.Infra.Data.Contexto
         public ProjetoModeloContext()
             : base("ProjetoModeloDDD")
         {
-
+            //oi
         }
 
         public DbSet<Cliente> Clientes {get;set;}
