@@ -1,6 +1,9 @@
-﻿using ProjetoModeloDDD.Domain.Entities;
+﻿using System;
+using System.Collections.Generic;
+using ProjetoModeloDDD.Domain.Entities;
 using ProjetoModeloDDD.Domain.Interfaces.Repositories;
 using ProjetoModeloDDD.Domain.Interfaces.Services;
+using System.Linq;
 
 namespace ProjetoModeloDDD.Domain.Services
 {
@@ -12,6 +15,11 @@ namespace ProjetoModeloDDD.Domain.Services
             : base(clienteRepository)
         {
             _clienteRepository = clienteRepository;
+        }
+
+        public IEnumerable<Cliente> ObterClientesEspeciais(IEnumerable<Cliente> clientes)
+        {
+            return clientes.Where(c => c.ClienteEspecial(c));
         }
     }
 }

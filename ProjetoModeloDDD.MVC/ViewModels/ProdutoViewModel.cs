@@ -9,7 +9,7 @@ namespace ProjetoModeloDDD.MVC.ViewModels
 {
     public class ProdutoViewModel
     {
-        [Key]
+        [Key]  
         public int ProdutoId { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo Nome")]
@@ -18,7 +18,7 @@ namespace ProjetoModeloDDD.MVC.ViewModels
         public string Nome { get; set; }
 
         [DataType(DataType.Currency)]
-        [Range(typeof(decimal), "0", "999999999999")]
+        [Range(typeof(decimal), "0", "99999999999999")]        
         [Required(ErrorMessage = "Preencha um valor")]
         public decimal Valor { get; set; }
 
