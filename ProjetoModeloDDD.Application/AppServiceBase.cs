@@ -42,7 +42,7 @@ namespace ProjetoModeloDDD.Application
 
         public void Dispose()
         {
-            _serviceBase.GetAll();
+            _serviceBase.Dispose();
         }
     }
 }
